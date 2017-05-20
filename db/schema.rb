@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520054158) do
+ActiveRecord::Schema.define(version: 20170520103305) do
 
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.string "pokemontype"
-    t.string "region"
+    t.integer "region_id"
     t.string "physiology"
     t.string "special_abilities"
     t.string "behavior"
     t.string "evolution"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_pokemons_on_region_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
