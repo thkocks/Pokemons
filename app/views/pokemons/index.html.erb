@@ -12,11 +12,11 @@
     <a href="<%=pokemon_path(pokemon.id)%>">
       <%=image_tag pokemon.image_url %>
     </a>
-    <p><%= "Region: " %><%= pokemon.region %></p>
+    <p><%= "Region: " %><%= pokemon.region.name %></p>
   </section>
 <% end %>
 </section>
 
 <hr>
 
-<%= link_to "[Add Pokemon]", new_pokemon_path %>
+<%= link_to "[Add Pokemon]", new_pokemon_path %> <%= link_to "[Regions]", regions_path %>
