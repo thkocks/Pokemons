@@ -1,8 +1,21 @@
-<h1>Pokemons</h1>
+<div class="title">
+  <h1>Pokemons</h1>
+</div>
 
+<hr>
+
+<section class="card">
 <% @pokemons.each do |pokemon| %>
-  <p><%= "Pokemon: " %><%= link_to pokemon.name, pokemon_path(pokemon.id) %>&emsp;<%= "Type: " %><%= pokemon.pokemontype %></p>
+  <section class="block>"
+    <h1><%= pokemon.name%></h3>
+    <p><%= "Type: " %><%= pokemon.pokemontype %></p>
+    <a href="<%=pokemon_path(pokemon.id)%>">
+      <%=image_tag pokemon.image_url %>
+    </a>
+    <p><%= "Region: " %><%= pokemon.region %></p>
+  </section>
 <% end %>
+</section>
 
 <hr>
 
