@@ -45,5 +45,5 @@ end
 private
 
 def pokemon_params
-  params.require(:pokemon).permit(:name, :pokemontype, :region, :physiology, :special_abilities, :behavior, :evolution, :image_url, :region_id)
+  params.require(:pokemon).permit(:name, :pokemontype, :region, :physiology, :special_abilities, :behavior, :evolution, :image_url)
 end
