@@ -1,0 +1,8 @@
+<h1> Regions </h1>
+
+<% @region.each do |region| %>
+<p><%= "Region: " %><%= link_to region.name, region_path(region.id)%>&emsp;<%= "Name: " %><%= region.name %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_region_path(@region) %> |
+<%= link_to 'Back', regions_path %>
