@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @region.name %>
+</p>
+
+<h4>List of Pokemons</h4>
+
+<% if @region.pokemons.any? %>
+  <ul>
+    <% @region.pokemons.each do |pokemon| %>
+      <li><%= pokemon.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no Pokemons in this region.</p>
+<% end %>
+
+<hr>
+
+<%= link_to "[Regions]", regions_path %> <%= link_to "[All Pokemons]", root_path %>

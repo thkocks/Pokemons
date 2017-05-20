@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Regions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+ <tbody>
+    <% @region.each do |region| %>
+      <tr>
+        <td><%= region.name %></td>
+        <td><%= link_to 'Show', region %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<hr>
+
+<%= link_to "[Add Pokemon]", new_pokemon_path %> <%= link_to "[All Pokemons]", root_path %>

@@ -5,7 +5,7 @@
   <p><%= @pokemon.pokemontype %><p>
 
 <h3><%= "Region: " %><h3>
-  <p><%= @pokemon.region %></p>
+  <p><%= @pokemon.region.name %></p>
 
 <h3><%= "Physiology: " %><h3>
   <p><%= @pokemon.physiology %></p>
@@ -26,3 +26,4 @@
   <%= link_to "[Edit]", edit_pokemon_path(@pokemon.id) %>
   <%= link_to "[Kill]", pokemon_path(@pokemon.id), method: :delete, data: { confirm: "Are you sure?" } %>
   <%= link_to "[All Pokemons]", root_path %>
+  <%= link_to "[Regions]", regions_path %>
