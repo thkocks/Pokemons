@@ -1,0 +1,28 @@
+<h1><%= @pokemon.name %></h1>
+  <%= image_tag @pokemon.image_url %>
+
+<h3><%= "Type:" %><h3>
+  <p><%= @pokemon.pokemontype %><p>
+
+<h3><%= "Region: " %><h3>
+  <p><%= @pokemon.region %></p>
+
+<h3><%= "Physiology: " %><h3>
+  <p><%= @pokemon.physiology %></p>
+
+<h3><%= "Behavior: " %><h3>
+    <p><%= @pokemon.behavior %></p>
+
+<h3><%= "Special Abilities: " %><h3>
+    <p><%= @pokemon.special_abilities %></p>
+
+<h3><%= "Evolution: " %><h3>
+    <p><%= @pokemon.evolution %></p>
+
+
+
+  <hr>
+
+  <%= link_to "[Edit]", edit_pokemon_path(@pokemon.id) %>
+  <%= link_to "[Kill]", pokemon_path(@pokemon.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to "[All Pokemons]", root_path %>

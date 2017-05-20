@@ -1,0 +1,35 @@
+<%= form_for @pokemon do |f| %>
+
+  <ul>
+    <% @pokemon.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :type %>
+  <%= f.text_field :pokemontype %>
+
+  <%= f.label :region %>
+  <%= f.text_field :region %>
+
+  <%= f.label :physiology %>
+  <%= f.text_field :physiology %>
+
+  <%= f.label :special_abilities %>
+  <%= f.text_field :special_abilities %>
+
+  <%= f.label :behavior %>
+  <%= f.text_field :behavior %>
+
+  <%= f.label :evolution %>
+  <%= f.text_field :evolution %>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <%= f.submit (@pokemon.new_record? ? "Create" : "Update") %>
+
+<% end %>

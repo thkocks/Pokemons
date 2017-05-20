@@ -1,0 +1,40 @@
+// Place all the styles related to the pokemons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//body {
+  //background-image: url('/bg_collage.jpg');
+  //background-color: white;
+//}
+
+body::after {
+  content: "";
+  background-image: url('/bg_sprites.png');
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+h1 {
+  color: darkblue;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h3 {
+  color: darkblue;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+p {
+  color: black;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+}
+
+a:link, a:active, a,:visited {
+  color: darkblue;
+}

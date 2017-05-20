@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pokemon_type: MyString
+  region: MyString
+  physiology: MyString
+  special_abilities: MyString
+  behavior: MyString
+  evolution: MyString
+  image_url: MyString
+
+two:
+  name: MyString
+  pokemon_type: MyString
+  region: MyString
+  physiology: MyString
+  special_abilities: MyString
+  behavior: MyString
+  evolution: MyString
+  image_url: MyString
